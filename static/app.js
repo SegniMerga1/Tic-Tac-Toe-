@@ -25,3 +25,15 @@ const winningLines = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+function renderBoard() {
+  boardEl.innerHTML = "";
+  board.forEach((value, index) => {
+    const button = document.createElement("button");
+    button.className = "cell";
+    button.textContent = value;
+    button.disabled = gameOver || value !== "";
+    button.addEventListener("click", () => handleMove(index));
+    boardEl.appendChild(button);
+  });
+}
