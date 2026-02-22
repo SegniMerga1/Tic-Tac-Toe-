@@ -93,3 +93,5 @@ formEl.addEventListener("submit", (event) => {
   };
   resetGame();
 });
+
+resetGame();
