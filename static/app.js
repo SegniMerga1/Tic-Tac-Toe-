@@ -76,3 +76,11 @@ function getWinner() {
   }
   return null;
 }
+
+function resetGame() {
+  board = emptyBoard();
+  currentPlayer = "X";
+  gameOver = false;
+  updateStatus(`${currentPlayerName()} turn`);
+  renderBoard();
+}
