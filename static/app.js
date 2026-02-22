@@ -50,3 +50,20 @@ function handleMove(index) {
   if (gameOver || board[index] !== "") {
     return;
   }
+
+  board[index] = currentPlayer;
+  const winner = getWinner();
+
+  if (winner) {
+    gameOver = true;
+    updateStatus(`${players[winner]} wins!`);
+  } else if (board.every((cell) => cell !== "")) {
+    gameOver = true;
+    updateStatus("Tie game!");
+  } else {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    updateStatus(`${currentPlayerName()} turn`);
+  }
+
+  renderBoard();
+}  
