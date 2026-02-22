@@ -37,3 +37,7 @@ function renderBoard() {
     boardEl.appendChild(button);
   });
 }
+
+function updateStatus(text) {
+  statusEl.textContent = text;
+}
