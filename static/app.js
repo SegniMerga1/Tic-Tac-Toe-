@@ -5,3 +5,11 @@ const playerXInput = document.getElementById("player-x");
 const playerOInput = document.getElementById("player-o");
 
 const emptyBoard = () => Array.from({ length: 9 }, () => "");
+
+let board = emptyBoard();
+let currentPlayer = "X";
+let gameOver = false;
+let players = {
+  X: "Player X",
+  O: "Player O",
+};
