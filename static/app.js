@@ -45,3 +45,8 @@ function updateStatus(text) {
 function currentPlayerName() {
   return players[currentPlayer] || `Player ${currentPlayer}`;
 }
+
+function handleMove(index) {
+  if (gameOver || board[index] !== "") {
+    return;
+  }
