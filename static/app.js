@@ -41,3 +41,7 @@ function renderBoard() {
 function updateStatus(text) {
   statusEl.textContent = text;
 }
+
+function currentPlayerName() {
+  return players[currentPlayer] || `Player ${currentPlayer}`;
+}
