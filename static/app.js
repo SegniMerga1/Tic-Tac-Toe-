@@ -67,3 +67,12 @@ function handleMove(index) {
 
   renderBoard();
 }  
+
+function getWinner() {
+  for (const [a, b, c] of winningLines) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+  return null;
+}
