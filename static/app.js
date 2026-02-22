@@ -84,3 +84,12 @@ function resetGame() {
   updateStatus(`${currentPlayerName()} turn`);
   renderBoard();
 }
+
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+  players = {
+    X: playerXInput.value.trim() || "Player X",
+    O: playerOInput.value.trim() || "Player O",
+  };
+  resetGame();
+});
