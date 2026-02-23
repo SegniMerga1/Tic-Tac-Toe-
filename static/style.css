@@ -30,4 +30,8 @@ body {
   gap: 40px;
 }
 
-
+.hero {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
