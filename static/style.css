@@ -151,4 +151,7 @@ button:hover {
     align-items: start;
   }
 
-  
+  .hero {
+    position: sticky;
+    top: 32px;
+  }
