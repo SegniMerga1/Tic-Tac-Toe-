@@ -24,3 +24,8 @@ body {
   min-height: 100vh;
 }
 
+.page {
+  padding: 48px clamp(20px, 5vw, 64px) 72px;
+  display: grid;
+  gap: 40px;
+}
