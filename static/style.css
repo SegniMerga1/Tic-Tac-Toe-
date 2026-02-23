@@ -121,3 +121,16 @@ button:hover {
   gap: 12px;
 }
 
+.cell {
+  border: 2px solid var(--stroke);
+  border-radius: 18px;
+  background: #fffaf4;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  height: 96px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease;
+}
