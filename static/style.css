@@ -145,3 +145,8 @@ button:hover {
   border-color: var(--accent);
 }
 
+@media (min-width: 900px) {
+  .page {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
