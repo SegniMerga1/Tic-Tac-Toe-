@@ -71,3 +71,10 @@ label {
   font-weight: 600;
 }
 
+input {
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: inherit;
+}
