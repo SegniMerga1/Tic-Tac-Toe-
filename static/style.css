@@ -120,3 +120,4 @@ button:hover {
   grid-template-columns: repeat(3, minmax(72px, 1fr));
   gap: 12px;
 }
+
