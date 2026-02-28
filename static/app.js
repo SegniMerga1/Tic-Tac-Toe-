@@ -43,8 +43,14 @@ function renderBoard() {
   });
 }
 
-function updateStatus(text) {
+function updateStatus(text, mark = null) {
   statusEl.textContent = text;
+  statusEl.classList.remove("status-x", "status-o");
+  if (mark === "X") {
+    statusEl.classList.add("status-x");
+  } else if (mark === "O") {
+    statusEl.classList.add("status-o");
+  }
 }
 
 function currentPlayerName() {
@@ -61,13 +67,13 @@ function handleMove(index) {
 
   if (winner) {
     gameOver = true;
-    updateStatus(`${players[winner]} wins!`);
+    updateStatus(`${players[winner]} wins!`, winner);
   } else if (board.every((cell) => cell !== "")) {
     gameOver = true;
     updateStatus("Tie game!");
   } else {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    updateStatus(`${currentPlayerName()} turn`);
+    updateStatus(`${currentPlayerName()} turn`, currentPlayer);
   }
 
   renderBoard();
@@ -86,7 +92,7 @@ function resetGame() {
   board = emptyBoard();
   currentPlayer = "X";
   gameOver = false;
-  updateStatus(`${currentPlayerName()} turn`);
+  updateStatus(`${currentPlayerName()} turn`, currentPlayer);
   renderBoard();
 }
 
