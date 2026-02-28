@@ -31,6 +31,11 @@ function renderBoard() {
   board.forEach((value, index) => {
     const button = document.createElement("button");
     button.className = "cell";
+    if (value === "X") {
+      button.classList.add("x-mark");
+    } else if (value === "O") {
+      button.classList.add("o-mark");
+    }
     button.textContent = value;
     button.disabled = gameOver || value !== "";
     button.addEventListener("click", () => handleMove(index));
